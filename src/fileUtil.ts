@@ -72,9 +72,16 @@ export class FileUtil {
             const { files } = await Filesystem.readdir(sourceDir);
             for (let i = 0; i < files.length; i++) {
                 const file = files[i];
-                if (ignoreList.includes(file)) continue;
-                const sourcePath = sourceDir.path + "/" + file;
-                const destPath = destinationDir.path + "/" + file;
+                let fileName: any = file;
+
+                if (typeof file === "object") {
+                    console.log("file is an object", file);
+                    fileName = (file as any).name;
+                }
+
+                if (ignoreList.includes(fileName)) continue;
+                const sourcePath = sourceDir.path + "/" + fileName;
+                const destPath = destinationDir.path + "/" + fileName;
                 const source = { ...sourceDir, path: sourcePath };
                 const destination = { ...destinationDir, path: destPath };
                 if (await FileUtil.directoryExists(source.directory, source.path)) { // is directory

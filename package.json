@@ -4,8 +4,8 @@
   "description": "CodePush Plugin for Capacitor",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
-  "homepage": "https://github.com/mapiacompany/capacitor-codepush",
-  "repository": "github:mapiacompany/capacitor-codepush",
+  "homepage": "https://github.com/vaskea/capacitor-codepush",
+  "repository": "github:vaskea/capacitor-codepush",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -26,7 +26,7 @@
     "capacitor-android",
     "capacitor-ios"
   ],
-  "author": "MAPIACOMPANY",
+  "author": "Vasilije Abazovic",
   "license": "MIT",
   "devDependencies": {
     "@capacitor-community/http": "^1.0.0",
